@@ -1,4 +1,5 @@
 import javax.ejb.EJB;
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +16,7 @@ import java.util.Scanner;
 @MultipartConfig
 public class HelloWorldServlet extends HttpServlet {
 
-    @EJB
+    @Inject
     private LocalNumbersGenerator numbersGenerator;
 
     @Override
